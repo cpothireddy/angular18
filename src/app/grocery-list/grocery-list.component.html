@@ -1,0 +1,8 @@
+<h1>Grocery List</h1>
+
+<ul>
+  <li *ngFor="let grocery of groceries$ | async">
+    {{grocery.name}}
+    <a [routerLink]="['/groceries/edit', grocery.id]">Edit</a>
+  </li>
+</ul>
